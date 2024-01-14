@@ -6,7 +6,7 @@ namespace Manager.API.Models.Request
     {
         
         [Required(ErrorMessage = "O id não pode ser vazio.")]
-        public int Id { get; set; }
+        public long Id { get; set; }
         
         [Required(ErrorMessage = "O nome não pode ser vazio.")]
         [MinLength(3, ErrorMessage = "O nome deve ter no mínimo 3 caracteres.")]

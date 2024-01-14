@@ -6,6 +6,7 @@ using Manager.API.Utils;
 using Manager.Core.Exceptions;
 using Manager.Services.DTO;
 using Manager.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Manager.API.Controllers
@@ -22,6 +23,7 @@ namespace Manager.API.Controllers
         }
         
         [HttpPost]
+        [Authorize]
         [Route("/api/v1/users/create")]
         public async Task<IActionResult> CreateUser([FromBody] UserRequestModel userRequestModel)
         {
@@ -52,6 +54,7 @@ namespace Manager.API.Controllers
         }
         
         [HttpPut]
+        [Authorize]
         [Route("/api/v1/users/update")]
         public async Task<IActionResult> UpdateUser([FromBody] UserUpdateRequestModel userUpdateRequestModel)
         {
@@ -83,6 +86,7 @@ namespace Manager.API.Controllers
         }
         
         [HttpDelete]
+        [Authorize]
         [Route("/api/v1/users/remove/{id}")]
         public async Task<IActionResult> RemoveUser(long id)
         {
@@ -107,6 +111,7 @@ namespace Manager.API.Controllers
         }
         
         [HttpGet]
+        [Authorize]
         [Route("/api/v1/users/{id}")]
         public async Task<IActionResult> GetUser(long id)
         {
@@ -141,6 +146,7 @@ namespace Manager.API.Controllers
         }
         
         [HttpGet]
+        [Authorize]
         [Route("/api/v1/users")]
         public async Task<IActionResult> GetAll()
         {
