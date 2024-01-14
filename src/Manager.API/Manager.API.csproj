@@ -9,7 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Manager.Infra\Manager.Infra.csproj" />
+    <ProjectReference Include="..\Manager.Infra.IoC\Manager.Infra.IoC.csproj" />
+    <ProjectReference Include="..\Manager.Services\Manager.Services.csproj" />
   </ItemGroup>
 
 </Project>

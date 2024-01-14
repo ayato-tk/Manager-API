@@ -37,4 +37,5 @@ namespace Manager.Infra.Mappings
                 .HasColumnType("VARCHAR(100)");
         }
     }
+    
 }
