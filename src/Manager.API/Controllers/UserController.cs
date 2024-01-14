@@ -47,7 +47,7 @@ namespace Manager.API.Controllers
             {
                 return BadRequest(Responses.DomainErrorMessage(error.Message, error.Errors));
             }
-            catch (Exception error)
+            catch (Exception)
             {
                 return StatusCode(500, Responses.ApplicationErrorMessage());
             }
@@ -79,7 +79,7 @@ namespace Manager.API.Controllers
             {
                 return BadRequest(Responses.DomainErrorMessage(error.Message, error.Errors));
             }
-            catch (Exception error)
+            catch (Exception)
             {
                 return StatusCode(500, Responses.ApplicationErrorMessage());
             }
@@ -104,7 +104,7 @@ namespace Manager.API.Controllers
             {
                 return BadRequest(Responses.DomainErrorMessage(error.Message));
             }
-            catch (Exception error)
+            catch (Exception)
             {
                 return StatusCode(500, Responses.ApplicationErrorMessage());
             }
@@ -139,7 +139,7 @@ namespace Manager.API.Controllers
             {
                 return BadRequest(Responses.DomainErrorMessage(error.Message));
             }
-            catch (Exception error)
+            catch (Exception)
             {
                 return StatusCode(500, Responses.ApplicationErrorMessage());
             }
@@ -174,7 +174,7 @@ namespace Manager.API.Controllers
             {
                 return BadRequest(Responses.DomainErrorMessage(error.Message));
             }
-            catch (Exception error)
+            catch (Exception)
             {
                 return StatusCode(500, Responses.ApplicationErrorMessage());
             }

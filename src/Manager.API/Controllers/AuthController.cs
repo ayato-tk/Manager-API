@@ -48,7 +48,7 @@ namespace Manager.API.Controllers
 
                 return StatusCode(401, Responses.UnathorizedErrorMessage());
             }
-            catch (Exception error)
+            catch (Exception)
             {
                 return StatusCode(500, Responses.ApplicationErrorMessage());
             }
