@@ -24,8 +24,10 @@ namespace Manager.Services.Services
 
             if (user != null)
                 throw new DomainException("User is already registered.");
+
+            var mappedUser = UserMapper.MapToUser((userDto));
             
-            var userCreated = await _userRepository.CreateAsync(UserMapper.MapToUser((userDto)));
+            var userCreated = await _userRepository.CreateAsync(mappedUser);
 
             return UserMapper.MapToUserDto(userCreated);
         }

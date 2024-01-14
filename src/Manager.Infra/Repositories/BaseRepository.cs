@@ -48,10 +48,12 @@ namespace Manager.Infra.Repositories
 
         public virtual async Task<T> GetByIdAsync(long id)
         {
-            return await _context.Set<T>()
-                                    .AsNoTracking()
-                                    .Where(x => x.Id == id)
-                                    .FirstOrDefaultAsync();
+            var obj = await _context.Set<T>()
+                .AsNoTracking()
+                .Where(x => x.Id == id)
+                .ToListAsync();
+
+            return obj.FirstOrDefault();
         }
 
         public virtual async Task<List<T>> GetAllAsync()
